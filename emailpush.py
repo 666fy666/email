@@ -7,11 +7,11 @@ from email.header import Header
 # 用于构建邮件头
 
 # 发信方的信息：发信邮箱，QQ 邮箱授权码
-from_addr = 'fy16601750698@163.com'
-password = 'VBRCNCUMSJBAVYQZ'
+from_addr = ''
+password = ''
 
 # 收信方邮箱
-to_addr = '657769008@qq.com'
+to_addr = ''
 
 # 发信服务器
 smtp_server = 'smtp.163.com'
@@ -32,7 +32,7 @@ msg = MIMEText(ms, 'plain', 'utf-8')
 # 邮件头信息
 msg['From'] = Header(from_addr)
 msg['To'] = Header(to_addr)
-msg['Subject'] = Header('体温填报结果')
+msg['Subject'] = Header('结果')
 
 # 开启发信服务，这里使用的是加密传输
 server = smtplib.SMTP_SSL(smtp_server)
